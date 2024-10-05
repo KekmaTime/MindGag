@@ -19,14 +19,20 @@ export const MenuItem = ({
   active,
   item,
   children,
+  onClick,
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
   children?: React.ReactNode;
+  onClick?: () => void;
 }) => {
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative ">
+    <div
+      onMouseEnter={() => setActive(item)}
+      className="relative"
+      onClick={onClick}
+    >
       <motion.p
         transition={{ duration: 0.3 }}
         className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
@@ -39,17 +45,14 @@ export const MenuItem = ({
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={transition}
         >
-          {active === item && (
+          {active === item && children && (
             <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
               <motion.div
                 transition={transition}
-                layoutId="active" // layoutId ensures smooth animation
+                layoutId="active"
                 className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
               >
-                <motion.div
-                  layout // layout ensures smooth animation
-                  className="w-max h-full p-4"
-                >
+                <motion.div layout className="w-max h-full p-4">
                   {children}
                 </motion.div>
               </motion.div>
@@ -110,12 +113,23 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, href, ...rest }: { children: React.ReactNode, href?: string, [key: string]: any }) => {
+export const HoveredLink = ({
+  children,
+  href,
+  ...rest
+}: {
+  children: React.ReactNode;
+  href?: string;
+  [key: string]: any;
+}) => {
   if (href) {
     return (
       <Link
         href={href}
-        className={cn("text-neutral-700 dark:text-neutral-200 hover:text-black", rest.className)}
+        className={cn(
+          "text-neutral-700 dark:text-neutral-200 hover:text-black",
+          rest.className
+        )}
       >
         {children}
       </Link>
@@ -125,7 +139,10 @@ export const HoveredLink = ({ children, href, ...rest }: { children: React.React
   return (
     <button
       onClick={rest.onClick}
-      className={cn("text-neutral-700 dark:text-neutral-200 hover:text-black", rest.className)}
+      className={cn(
+        "text-neutral-700 dark:text-neutral-200 hover:text-black",
+        rest.className
+      )}
     >
       {children}
     </button>
