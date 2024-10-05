@@ -5,6 +5,12 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import MessageSheet from "@/components/actions/MessageSheet";
+import { CalendarDays } from "lucide-react";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 const HomePage = () => {
   return (
@@ -20,25 +26,60 @@ const HomePage = () => {
           <h2 className="text-xl mb-4">Software Engineer</h2>
           <p className="text-center max-w-md mb-6">
             CS Junior at{" "}
-            <Link
-              className="font-bold"
-              href="https://sctce.ac.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              SCT
-            </Link>
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <span className="text-primary cursor-pointer font-bold">
+                  SCT
+                </span>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-80 bg-black text-white ">
+                <div className="flex justify-between space-x-2">
+                  <Avatar className="h-12 w-12">
+                    <AvatarImage src="/scticon.png" />
+                    <AvatarFallback>SCT</AvatarFallback>
+                  </Avatar>
+                  <div className="space-y-1">
+                    <h4 className="text-sm font-semibold">
+                      SCT College of Engineering
+                    </h4>
+                    <div className="flex items-center pt-2">
+                      <CalendarDays className="mr-2 h-5 w-5 opacity-70" />{" "}
+                      <span className="text-xs text-muted-foreground">
+                        Joined August 2022
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </HoverCardContent>
+            </HoverCard>{" "}
             , Trivandrum.
             <br />
             Working as a React Developer at{" "}
-            <Link
-              className="font-bold"
-              href="https://www.linkedin.com/company/casa-shoping/people/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              CASA
-            </Link>
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <span className="text-primary cursor-pointer font-bold">
+                  CASA
+                </span>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-80 bg-black text-white ">
+                <div className="flex justify-between space-x-2">
+                  <Avatar className="h-20 w-20">
+                    <AvatarImage src="/fassora_logo.jpg" />
+                    <AvatarFallback>CASA</AvatarFallback>
+                  </Avatar>
+                  <div className="space-y-1">
+                    <h4 className="text-sm font-semibold">CASA</h4>
+                    <p className="text-sm">Bumble For Clothing.</p>
+                    <div className="flex items-center pt-2">
+                      <CalendarDays className="mr-2 h-5 w-5 opacity-70" />{" "}
+                      <span className="text-xs text-muted-foreground">
+                        Joined September 2024
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </HoverCardContent>
+            </HoverCard>{" "}
             .
           </p>
           <div className="flex space-x-4 mb-8">
