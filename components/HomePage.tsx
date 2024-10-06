@@ -85,7 +85,13 @@ const HomePage = () => {
           <div className="flex space-x-4 mb-8">
             <MessageSheet />
             <Button asChild>
-              <a href="mailto:22am014@sctce.ac.in">My Resume</a>
+              <a
+                href="https://drive.google.com/uc?export=download&id=13BaiJQCFat3595MJz4bWa1VfpxntqBc9"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                My Resume
+              </a>
             </Button>
           </div>
         </div>

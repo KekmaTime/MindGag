@@ -54,7 +54,9 @@ function Navbar({ className }: { className?: string }) {
               Projects
             </a>
             <a
-              href="/projects"
+              href="https://github.com/KekmaTime"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-neutral-700 dark:text-neutral-200 hover:text-black"
             >
               Github
@@ -64,31 +66,33 @@ function Navbar({ className }: { className?: string }) {
         <MenuItem setActive={setActive} active={active} item="Contact">
           <div className="flex flex-col space-y-4 text-sm">
             <a
-              href="/contact"
+              href="https://discord.gg/cbaTTfQcCN"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-neutral-700 dark:text-neutral-200 hover:text-black"
             >
               Discord
             </a>
             <a
-              href="/contact"
+              href="mailto:22am014@sctce.ac.in"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-neutral-700 dark:text-neutral-200 hover:text-black"
             >
               Mail
             </a>
             <a
-              href="/contact"
+              href="https://www.linkedin.com/in/ananth-prathap"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-neutral-700 dark:text-neutral-200 hover:text-black"
             >
               LinkedIn
             </a>
             <a
-              href="/contact"
-              className="text-neutral-700 dark:text-neutral-200 hover:text-black"
-            >
-              Instagram
-            </a>
-            <a
-              href="/contact"
+              href="https://twitter.com/KekmaTime"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-neutral-700 dark:text-neutral-200 hover:text-black"
             >
               Twitter

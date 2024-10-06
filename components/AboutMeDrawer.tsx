@@ -24,8 +24,8 @@ const AboutMeDrawer = () => {
       <div className="p-4 pb-0">
         <div className="flex justify-between items-start space-x-8">
           <div className="flex-1">
-            <div className="text-4xl font-bold tracking-tighter mb-2">
-              Ananth Prathap
+            <div className="text-4xl font-bold whitespace-nowrap tracking-tighter mb-2">
+              Ananth aka Zacherina
             </div>
             <div className="text-2xl text-center inline-block whitespace-nowrap text-muted-foreground">
               Breaking and building stuff.
