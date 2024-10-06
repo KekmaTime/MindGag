@@ -67,3 +67,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+.markdown-content ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+}
+
+.markdown-content li {
+  margin-bottom: 0.5em;
+}

@@ -3,9 +3,12 @@
 import React, { useState } from "react";
 import { Menu, MenuItem } from "@/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
+import AboutMeDrawer from "@/components/AboutMeDrawer";
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   return (
     <div
@@ -15,12 +18,19 @@ function Navbar({ className }: { className?: string }) {
         <MenuItem setActive={setActive} active={active} item="Home" />
         <MenuItem setActive={setActive} active={active} item="About">
           <div className="flex flex-col space-y-4 text-sm">
-            <a
-              href="/about"
-              className="text-neutral-700 dark:text-neutral-200 hover:text-black"
-            >
-              Myself
-            </a>
+            <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
+              <DrawerTrigger asChild>
+                <button
+                  className="text-left text-neutral-700 dark:text-neutral-200 hover:text-black"
+                  onClick={() => setIsDrawerOpen(true)}
+                >
+                  Myself
+                </button>
+              </DrawerTrigger>
+              <DrawerContent>
+                <AboutMeDrawer />
+              </DrawerContent>
+            </Drawer>
             <a
               href="/about"
               className="text-neutral-700 dark:text-neutral-200 hover:text-black"
