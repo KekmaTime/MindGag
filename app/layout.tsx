@@ -17,7 +17,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Zacherina's",
-  description: "Portfolio of Ananth Prathap, CS Junior at SCT, Trivandrum. Working as React Developer at CASA.",
+  description: "Zacherina is a software engineer who breaks software for fun",
 };
 
 export default function RootLayout({
