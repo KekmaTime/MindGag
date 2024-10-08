@@ -3,14 +3,13 @@
 import Navbar from "@/components/Navbar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import MessageSheet from "@/components/actions/MessageSheet";
 import { CalendarDays } from "lucide-react";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import MessageSheet from "./actions/MessageSheet";
 
 const HomePage = () => {
   return (

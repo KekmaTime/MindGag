@@ -1,8 +1,5 @@
 import React from "react";
 import {
-  DrawerHeader,
-  DrawerTitle,
-  DrawerDescription,
   DrawerFooter,
   DrawerClose,
 } from "@/components/ui/drawer";
@@ -25,7 +22,7 @@ const AboutMeDrawer = () => {
         <div className="flex justify-between items-start space-x-8">
           <div className="flex-1">
             <div className="text-4xl font-bold whitespace-nowrap tracking-tighter mb-2">
-              Ananth aka Zacherina
+              Ananth / Zacherina
             </div>
             <div className="text-2xl text-center inline-block whitespace-nowrap text-muted-foreground">
               Breaking and building stuff.
@@ -45,10 +42,10 @@ const AboutMeDrawer = () => {
           <ReactMarkdown
             className="text-lg text-muted-foreground text-white markdown-content"
             components={{
-              ul: ({ node, ...props }) => (
+              ul: ({ ...props }) => (
                 <ul className="list-disc pl-5 space-y-3" {...props} />
               ),
-              li: ({ node, ...props }) => <li className="text-xl" {...props} />,
+              li: ({...props }) => <li className="text-xl" {...props} />,
             }}
           >
             {markdownContent}
@@ -57,7 +54,7 @@ const AboutMeDrawer = () => {
       </div>
       <DrawerFooter>
         <DrawerClose asChild>
-          <Button variant="outline">Yea, I'm done here</Button>
+          <Button variant="outline">Yea, I&apos;m done here</Button>
         </DrawerClose>
       </DrawerFooter>
     </div>
