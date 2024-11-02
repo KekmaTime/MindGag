@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "@/components/ui/toaster";
+import { ThemeProvider } from "@/app/components/theme-provider";
+import { Toaster } from "@/app/components/ui/toaster";
 import { montserrat } from "@/app/fonts";
 
 export const metadata: Metadata = {

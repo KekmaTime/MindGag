@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { Menu, MenuItem } from "@/components/ui/navbar-menu";
+import { Menu, MenuItem } from "@/app/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
-import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
-import AboutMeDrawer from "@/components/AboutMeDrawer";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/app/components/ui/drawer";
+import AboutMeDrawer from "@/app/components/AboutMeDrawer";
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);

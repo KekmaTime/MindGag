@@ -1,5 +1,5 @@
-import { BackButton } from "@/components/BackButton";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { BackButton } from "@/app/components/BackButton";
+import { ThemeToggle } from "@/app/components/theme-toggle";
 
 export default function BlogLayout({
   children,

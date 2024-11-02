@@ -1,14 +1,14 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import Navbar from "@/app/components/Navbar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/app/components/ui/avatar";
+import { Button } from "@/app/components/ui/button";
 import { CalendarDays } from "lucide-react";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/components/ui/hover-card";
+} from "@/app/components/ui/hover-card";
 import MessageSheet from "./actions/MessageSheet";
 
 const HomePage = () => {

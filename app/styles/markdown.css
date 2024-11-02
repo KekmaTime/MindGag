@@ -40,7 +40,7 @@
 }
 
 .markdown pre {
-    @apply -mx-4 mb-8 overflow-y-auto p-4 text-sm;
+    @apply -mx-4 mb-8 overflow-y-auto p-4 text-sm bg-muted;
     clip-path: var(--path);
     border-top-right-radius: var(--radius-top);
     border-top-left-radius: var(--radius-top);
@@ -57,36 +57,45 @@
 .markdown blockquote {
     @apply relative -left-2 -ml-4 mb-8 pl-4;
     font-style: italic;
-    border-left: 3px solid hsla(0, 0%, 0%, 0.9);
-    border-left-color: inherit;
+    border-left: 3px solid hsl(var(--primary));
     opacity: 0.8;
 }
 
-.markdown blockquote p {
-    margin: 0;
-    padding: 0;
-}
-
 .markdown ul {
-    margin-bottom: 1.75rem;
-    list-style: disc;
-    list-style-position: outside;
+    @apply mb-8 list-disc pl-4;
 }
 
 .markdown li {
-    margin-bottom: calc(1.75rem / 2);
+    @apply mb-2;
 }
 
 .markdown img {
-    @apply mb-8;
+    @apply mb-8 rounded-lg;
     max-width: 100%;
 }
 
-.markdown pre [data-highlighted-line] {
-    margin-left: -16px;
-    padding-left: 12px;
-    border-left: 4px solid #ffa7c4;
-    background-color: #022a4b;
-    display: block;
-    padding-right: 1em;
+/* Add these styles for tables */
+.markdown table {
+  @apply w-full mb-8;
+}
+
+.markdown table th {
+  @apply p-2 text-left font-bold bg-zinc-900 text-white;
+}
+
+.markdown table td {
+  @apply p-2 border-b border-zinc-800;
+}
+
+.markdown table tr:nth-child(even) {
+  @apply bg-zinc-100 dark:bg-zinc-900;
+}
+
+.markdown table tr:nth-child(odd) {
+  @apply bg-white dark:bg-zinc-800;
+}
+
+/* For the star ratings */
+.markdown td:has(⭐️) {
+  @apply whitespace-nowrap;
 }

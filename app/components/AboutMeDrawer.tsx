@@ -2,8 +2,8 @@ import React from "react";
 import {
   DrawerFooter,
   DrawerClose,
-} from "@/components/ui/drawer";
-import { Button } from "@/components/ui/button";
+} from "@/app/components/ui/drawer";
+import { Button } from "@/app/components/ui/button";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 
