@@ -72,9 +72,48 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily: {
+        sans: ['var(--font-montserrat)'],
+        montserrat: ['var(--font-montserrat)'],
+        mono: ['var(--font-geist-mono)'],
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: '100%',
+            color: 'inherit',
+            a: {
+              color: 'inherit',
+              textDecoration: 'none',
+              fontWeight: '500',
+            },
+            h1: {
+              textAlign: 'center',
+            },
+            h2: {
+              textAlign: 'center',
+            },
+            h3: {
+              textAlign: 'center',
+            },
+            p: {
+              textAlign: 'center',
+            },
+            li: {
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              maxWidth: '80%',
+            },
+            ul: {
+              listStyle: 'none',
+              paddingLeft: '0',
+            }
+          },
+        },
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config
 
 export default config

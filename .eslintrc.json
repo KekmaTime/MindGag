@@ -5,10 +5,10 @@
     "@next/next/no-page-custom-font": "off",
     "react/display-name": "off",
     "@next/next/no-img-element": "off",
-    "react/no-unknown-property": "off",
-    "jsx-a11y/alt-text": "off",
-    "react/jsx-key": "off",
-    "react-hooks/rules-of-hooks": "off",
-    "react-hooks/exhaustive-deps": "off"
+    "react/no-unknown-property": "error",
+    "jsx-a11y/alt-text": "error",
+    "react/jsx-key": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }

@@ -32,7 +32,7 @@ function Navbar({ className }: { className?: string }) {
               </DrawerContent>
             </Drawer>
             <a
-              href="/about"
+              href="/blogs"
               className="text-neutral-700 dark:text-neutral-200 hover:text-black"
             >
               Blogs
@@ -66,7 +66,7 @@ function Navbar({ className }: { className?: string }) {
         <MenuItem setActive={setActive} active={active} item="Contact">
           <div className="flex flex-col space-y-4 text-sm">
             <a
-              href="discordapp.com/users/1093592290959818764"
+              href="https://discordapp.com/users/1093592290959818764"
               target="_blank"
               rel="noopener noreferrer"
               className="text-neutral-700 dark:text-neutral-200 hover:text-black"
