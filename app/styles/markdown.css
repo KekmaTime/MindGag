@@ -40,7 +40,7 @@
 }
 
 .markdown pre {
-    @apply -mx-4 mb-8 overflow-y-auto p-4 text-sm bg-muted;
+    @apply -mx-4 mb-8 overflow-y-auto p-4 text-sm bg-muted relative;
     clip-path: var(--path);
     border-top-right-radius: var(--radius-top);
     border-top-left-radius: var(--radius-top);
@@ -48,6 +48,7 @@
     border-bottom-left-radius: var(--radius-bottom);
     padding-top: var(--padding-top);
     padding-bottom: var(--padding-bottom);
+    padding-right: 3rem;
 }
 
 .markdown pre code {

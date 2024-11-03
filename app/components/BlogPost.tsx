@@ -4,8 +4,12 @@ import remarkSmartypants from "remark-smartypants"
 import remarkGfm from 'remark-gfm'
 import rehypePrettyCode from "rehype-pretty-code"
 import '@/app/styles/markdown.css'
+import { Pre } from '@/app/components/Pre'
 
 const components = {
+  pre: (props: React.DetailedHTMLProps<React.HTMLAttributes<HTMLPreElement>, HTMLPreElement>) => (
+    <Pre {...props}>{props.children}</Pre>
+  ),
   table: (props: any) => (
     <div className="my-6 w-full overflow-x-auto">
       <table className="w-full border-collapse" {...props} />
@@ -65,5 +69,5 @@ export default function BlogPost({ title, date, description, content }: BlogPost
         </div>
       </div>
     </article>
-  );
+  )
 }

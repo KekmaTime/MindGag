@@ -10,10 +10,14 @@ import {
   HoverCardTrigger,
 } from "@/app/components/ui/hover-card";
 import MessageSheet from "./actions/MessageSheet";
+import { ThemeToggle } from "./theme-toggle";
 
 const HomePage = () => {
   return (
     <div className="w-full bg-background text-foreground">
+      <div className="fixed top-8 right-8">
+        <ThemeToggle />
+      </div>
       <Navbar />
       <div className="max-w-6xl mx-auto">
         <div className="min-h-screen flex flex-col items-center justify-center relative">
@@ -31,7 +35,7 @@ const HomePage = () => {
                   SCT
                 </span>
               </HoverCardTrigger>
-              <HoverCardContent className="w-80 bg-black text-white ">
+              <HoverCardContent className="w-80 bg-popover text-popover-foreground">
                 <div className="flex justify-between space-x-2">
                   <Avatar className="h-12 w-12">
                     <AvatarImage src="/scticon.png" />
@@ -60,7 +64,7 @@ const HomePage = () => {
                   CASA
                 </span>
               </HoverCardTrigger>
-              <HoverCardContent className="w-80 bg-black text-white ">
+              <HoverCardContent className="w-80 bg-popover text-popover-foreground">
                 <div className="flex justify-between space-x-2">
                   <Avatar className="h-20 w-20">
                     <AvatarImage src="/fassora_logo.jpg" />
