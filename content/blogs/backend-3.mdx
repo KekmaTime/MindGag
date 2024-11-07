@@ -159,7 +159,7 @@ use uuid::Uuid;
 use log::{info, warn};
 use crate::models::{CreateBlogPost, UpdateBlogPost};
 use crate::store::Store;
-
+ 
 pub async fn create_post(
     store: web::Data<Store>,
     post: web::Json<CreateBlogPost>,
@@ -169,14 +169,14 @@ pub async fn create_post(
     info!("Successfully created post with id: {}", post.id);
     HttpResponse::Created().json(post)
 }
-
+ 
 pub async fn get_post(
     store: web::Data<Store>,
     id: web::Path<Uuid>,
 ) -> impl Responder {
     let uuid = id;
     info!("Fetching post with id: {}", uuid);
-    match store.get_post(uuid) {
+    match store.get_post(*uuid) {
         Some(post) => {
             info!("Found post: {}", post.title);
             HttpResponse::Ok().json(post)
@@ -187,14 +187,14 @@ pub async fn get_post(
         }
     }
 }
-
+ 
 pub async fn list_posts(store: web::Data<Store>) -> impl Responder {
     info!("Listing all posts");
     let posts = store.list_posts();
     info!("Retrieved {} posts", posts.len());
     HttpResponse::Ok().json(posts)
 }
-
+ 
 pub async fn update_post(
     store: web::Data<Store>,
     id: web::Path<Uuid>,
@@ -202,7 +202,7 @@ pub async fn update_post(
 ) -> impl Responder {
     let uuid = id;
     info!("Updating post with id: {}", uuid);
-    match store.update_post(uuid, update.into_inner()) {
+    match store.update_post(*uuid, update.into_inner()) {
         Some(post) => {
             info!("Successfully updated post: {}", post.title);
             HttpResponse::Ok().json(post)
@@ -213,14 +213,14 @@ pub async fn update_post(
         }
     }
 }
-
+ 
 pub async fn delete_post(
     store: web::Data<Store>,
     id: web::Path<Uuid>,
 ) -> impl Responder {
     let uuid = id;
     info!("Attempting to delete post with id: {}", uuid);
-    if store.delete_post(uuid) {
+    if store.delete_post(*uuid) {
         info!("Successfully deleted post with id: {}", uuid);
         HttpResponse::NoContent().finish()
     } else {
